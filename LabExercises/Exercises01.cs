@@ -71,6 +71,65 @@ List<string> listaStringhe = new List<string>() {"Ape","Cane","Topo","Aereo","As
             }
             Console.ReadLine();
 
+//3. Have a Dictionary with structure (int , List<int>) Sort form 0 to 9 lists in even position and from 9 to 0 lists in odd position
+
+            Dictionary<int, List<int>> listaOggetti = new Dictionary<int, List<int>>();
+
+            List<int> lista1 = new List<int>() { 5, 4, 3, 2, 1, 0 };
+            List<int> lista2 = new List<int>() { 0, 1, 2, 3, 4, 5 };
+            List<int> lista3 = new List<int>() { 5, 4, 3, 2, 1, 0 };
+            List<int> lista4 = new List<int>() { 0, 1, 2, 3, 4, 5 };
+            List<int> lista5 = new List<int>() { 5, 4, 3, 2, 1, 0 };
+
+            listaOggetti.Add(0, lista1);
+            listaOggetti.Add(1, lista2);
+            listaOggetti.Add(2, lista3);
+            listaOggetti.Add(3, lista4);
+            listaOggetti.Add(4, lista5);
+
+            Console.WriteLine("Initial Dictionary: "); //Printing Dictionary before sorting & reversing elements into the lists 
+
+            int k = 1;
+            foreach (KeyValuePair<int, List<int>> element in listaOggetti)
+            {
+
+                Console.Write("\nList {0}: ", k);
+                foreach (int i in element.Value)
+                {
+                    Console.Write(i + " ");
+                }
+                k++;
+            }
+
+            foreach (KeyValuePair<int, List<int>> element in listaOggetti)
+            {
+                if (element.Key % 2 == 0)
+                {
+                    element.Value.Sort();
+                }
+                else
+                {
+                    List<int> temp = new List<int>() { };
+                    temp = element.Value;
+                    temp.Sort();
+                    temp.Reverse();
+                }
+            }
+
+            Console.WriteLine("\n\nDictionary after sorting and reversing: "); //Printing resulting Dictionary
+            foreach (KeyValuePair<int, List<int>> element in listaOggetti)
+            {
+                
+                Console.Write("\nList {0}: ", j);
+                foreach(int i in element.Value)
+                {
+                    Console.Write(i + " ");
+                }
+                j++;
+            }
+            
+            Console.ReadLine();
+
 //4. Create a phrase into a string variable, then reverse the phrase 
 
             Console.Write("Enter a String : ");
