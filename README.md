@@ -1,4 +1,9 @@
-# Software-Development
-This Repository contains C# topics and exercises developed druing university classes and laboratories 
+# Software Development with C# and .NET 
+This Repo contains C# content about:
+📚 lectures and labs taken in university 
+🧪 Some .NET experiments 
+🖥️ little projects & docs taken from Web 
+
+⭐ Incoming content for special project ⭐
  
  
